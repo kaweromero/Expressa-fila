@@ -46,6 +46,10 @@ public class Exercicio2 {
 
 		}
 
+		if(fila1.getSize()==0 && fila2.getSize()==0){
+			JOptionPane.showMessageDialog(null, "OXI, faltou colocar parenteses na expressão!", "Erro", JOptionPane.ERROR_MESSAGE);
+			System.exit(0);
+		}
 		
 		if(fila1.getSize() > fila2.getSize()){
 			
