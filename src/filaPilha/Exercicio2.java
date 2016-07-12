@@ -54,18 +54,18 @@ public class Exercicio2 {
 		if(fila1.getSize() > fila2.getSize()){
 			
 			JOptionPane.showMessageDialog(null, "Falta fechar parenteses na expressão!", "Erro", JOptionPane.ERROR_MESSAGE);
-	
+			System.exit(0);
 		}
 		if(fila1.getSize() < fila2.getSize()){
 			
 			JOptionPane.showMessageDialog(null, "Falta Abrir parenteses na expressão!", "Erro", JOptionPane.ERROR_MESSAGE);
-
+			System.exit(0);
 		}
 		
 		if (fila1.getSize()== fila2.getSize()) {
 
 			JOptionPane.showMessageDialog(null, "A expressão ta supimpa!", "YAAAY", JOptionPane.INFORMATION_MESSAGE);
-
+			
 		} 
 
 	}
