@@ -40,9 +40,11 @@ public class FilaCircularDinamica {
 	public int removerFila() {
 		int removido;
 
-		if (vazia()) {
+		/*if (vazia()) {
 			removido = -1;
-		} else if (inicio == fim) {
+		} else*/ 
+		
+		if (inicio == fim) {
 			removido = inicio.dado;
 			inicio = null;
 			fim = null;

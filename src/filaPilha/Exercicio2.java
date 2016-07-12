@@ -6,7 +6,6 @@ import javax.swing.JOptionPane;
 
 public class Exercicio2 {
 
-	//Stack<String> stack = new Stack<>();
 	FilaCircularDinamica fila1 = new FilaCircularDinamica();
 	FilaCircularDinamica fila2 = new FilaCircularDinamica();
 
@@ -27,11 +26,10 @@ public class Exercicio2 {
 	public void split(String expressao) {
 
 		for (int i = 0; i < expressao.length(); i++) {
+			
 			if (expressao.charAt(i) == '(') {
 				fila1.adicionarFila(1);
-				//String abre = "(";
-				//inserir(fila1, abre);
-				//stack.addElement(abre);
+				
 			}
 
 			if (expressao.charAt(i) == ')') {
@@ -39,11 +37,11 @@ public class Exercicio2 {
 					fila2.adicionarFila(fila1.removerFila());
 				} catch (Exception e) {
 
-					JOptionPane.showMessageDialog(null, "Falta Abrir parenteses na expressão!");
+					JOptionPane.showMessageDialog(null, "Falta Abrir parenteses na expressão!", "Erro", JOptionPane.ERROR_MESSAGE);
+					System.exit(0);
 				}
 
 			}
-
 		}
 
 		if(fila1.getSize()==0 && fila2.getSize()==0){
